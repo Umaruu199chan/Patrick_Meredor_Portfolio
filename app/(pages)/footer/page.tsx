@@ -1,11 +1,12 @@
 "use client";
-import { Mail, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { Github, Instagram, Mail, Facebook } from 'lucide-react';
 import { motion } from "motion/react";
 
 export default function Footer() {
     return (
-        <footer id="footer" className="bg-background min-h-50 lg:min-h-25 w-full flex flex-col gap-5 lg:gap-0 
-        lg:flex-row lg:justify-between items-center p-10">
+        <footer id="footer" className="border-t border-black/50 dark:border-accent
+        bg-background min-h-50 lg:min-h-25 w-full flex flex-col gap-10 lg:gap-5 items-center p-10">
+            <div className='flex flex-col gap-3 lg:gap-0 lg:flex-row justify-between items-center w-full'>
             <motion.h1 
               className="font-hero text-4xl lg:text-5xl font-bold tracking-wide"
               initial={{ opacity: 0, y: 30 }}
@@ -22,23 +23,27 @@ export default function Footer() {
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.6 }}
               >
-                <div className="border px-3 py-1 text-md rounded-md duration-300 transform-border ease-out
-                    hover:border-green-300 hover:bg-green-700 hover:text-white font-inter">
+                <a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                    hover:border-green-300 hover:bg-green-700 hover:text-white">
                     <Instagram />
-                </div>
-                <div className="border px-3 py-1 text-md rounded-md duration-300 transform-border ease-out
-                    hover:border-green-300 hover:bg-green-700 hover:text-white font-inter">
+                </a>
+                <a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                    hover:border-green-300 hover:bg-green-700 hover:text-white">
                     <Facebook />
-                </div>
-                <div className="border px-3 py-1 text-md rounded-md duration-300 transform-border ease-out
-                    hover:border-green-300 hover:bg-green-700 hover:text-white font-inter">
+                </a>
+                <a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                    hover:border-green-300 hover:bg-green-700 hover:text-white">
+                    <Github />
+                </a>
+                <a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                    hover:border-green-300 hover:bg-green-700 hover:text-white">
                     <Mail />
-                </div>
-                <div className="border px-3 py-1 text-md rounded-md duration-300 transform-border ease-out
-                    hover:border-green-300 hover:bg-green-700 hover:text-white font-inter">
-                    <Linkedin />
-                </div>
+                </a>
             </motion.div>
+            </div>
+            <div>
+                <p className='font-inter border-t border-green-500 pt-2 font-medium'>Official Portfolio Website</p>
+            </div>
         </footer>
     )
 }

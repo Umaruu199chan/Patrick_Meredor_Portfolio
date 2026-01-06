@@ -2,38 +2,59 @@
 import { motion } from "motion/react";
 
 export default function Hero() {
+  const handleWorksClick = () => {
+    const projectsSection = document.getElementById("projects");
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleContactClick = () => {
+    const contactSection = document.getElementById("footer");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
-    <section className="min-h-screen w-full flex flex-col items-center justify-center gap-5">
-        <motion.div 
-          className="flex flex-row items-center gap-2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <div className="w-3 h-3 dark:bg-green-500 bg-green-700 rounded-full animate-pulse" />
-          <p className="text-xs lg:text-base dark:text-green-500  text-green-700 font-normal font-inter">Available for Work</p>
-        </motion.div>
-        <motion.h1
-          className="font-hero text-5xl lg:text-9xl font-bold text-center tracking-wide
-          bg-linear-to-b from-foreground via-foreground to-gray-500 bg-clip-text text-transparent p-2"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+    <main className="min-h-screen w-full flex flex-col items-center justify-center gap-5 lg:gap-10">
+      <motion.div
+        className="flex flex-col gap-2 items-center justify-center lg:gap-0"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <p className="font-birth text-2xl lg:text-4xl items-center justify-center text-green-500">Aspiring UI & UX Designer</p>
+        <h1
+          className="font-hero text-6xl lg:text-9xl font-bold text-center tracking-wider lg:tracking-wide
+          bg-linear-to-b from-foreground via-foreground to-gray-500 bg-clip-text text-transparent"
         >
           PATRICK MEREDOR
-        </motion.h1>
+        </h1>
+      </motion.div>
       <motion.div
+        className="flex flex-col gap-5 lg:flex-row"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        <button
-          className="border px-4 py-2 text-md bg-green-600 border-green-300 
-          rounded-md duration-300 transform-border ease-out hover:bg-green-700 text-white font-inter"
+        <motion.button
+          className="font-inter overflow-hidden border-b-2 px-2 py-1 border-green-500 dark:border-green-400"
+          whileHover="hover"
+          initial="initial"
+          onClick={handleContactClick}
         >
-          Contact Me
-        </button>
+          <span>Contact Me</span>
+        </motion.button>
+        <motion.button
+          className="font-inter overflow-hidden border-b-2 px-2 py-1 border-black dark:border-white"
+          whileHover="hover"
+          initial="initial"
+          onClick={handleWorksClick}
+        >
+          <span>My Works</span>
+        </motion.button>
       </motion.div>
-    </section>
+    </main>
   );
 }
