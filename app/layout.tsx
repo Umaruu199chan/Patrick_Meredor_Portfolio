@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/ui/shared/theme-provider";
-import { Geist, Geist_Mono, Bebas_Neue, Inter, Gasoek_One } from "next/font/google";
+import { Geist, Geist_Mono, Bebas_Neue, Inter, Birthstone} from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,9 +25,9 @@ const bebasNeue = Bebas_Neue({
   variable: "--font-bebas-neue",
 });
 
-const gasoekOne = Gasoek_One({
+const birthstone = Birthstone({
   weight: ["400"],
-  variable: "--font-gasoek-one",
+  variable: "--font-birthstone",
   subsets: ["latin"],
 })
 export const metadata: Metadata = {
@@ -49,7 +49,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${inter.variable} ${gasoekOne.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bebasNeue.variable} ${inter.variable} ${birthstone.variable} antialiased`}
       >
         <ThemeProvider
             attribute="class"
