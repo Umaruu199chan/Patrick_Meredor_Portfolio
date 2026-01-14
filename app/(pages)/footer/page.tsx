@@ -9,37 +9,51 @@ export default function Footer() {
             <div className='flex flex-col gap-3 lg:gap-0 lg:flex-row justify-between items-center w-full'>
             <motion.h1 
               className="font-hero text-4xl lg:text-5xl font-bold tracking-wide"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
             >
               PATRICK MEREDOR
             </motion.h1>
-            <motion.div
-              className="flex flex-row gap-3"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 0.6 }}
-              >
-                <a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
-                    hover:border-green-300 hover:bg-green-700 hover:text-white">
+            <div className="flex flex-row gap-3">
+                <motion.a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                    hover:border-green-300 hover:bg-green-700 hover:text-white"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.1 }}
+                    >
                     <Instagram />
-                </a>
-                <a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
-                    hover:border-green-300 hover:bg-green-700 hover:text-white">
+                </motion.a>
+                <motion.a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                    hover:border-green-300 hover:bg-green-700 hover:text-white"
+                    initial={{ opacity: 0, x:50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.2 }}
+                >
                     <Facebook />
-                </a>
-                <a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
-                    hover:border-green-300 hover:bg-green-700 hover:text-white">
+                </motion.a>
+                <motion.a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                    hover:border-green-300 hover:bg-green-700 hover:text-white"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.3 }}
+                >
                     <Github />
-                </a>
-                <a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
-                    hover:border-green-300 hover:bg-green-700 hover:text-white">
+                </motion.a>
+                <motion.a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                    hover:border-green-300 hover:bg-green-700 hover:text-white"
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.4}}
+                >
                     <Mail />
-                </a>
-            </motion.div>
+                </motion.a>
+            </div>
             </div>
             <div>
                 <p className='font-inter border-t border-green-500 pt-2 font-medium'>Official Portfolio Website</p>

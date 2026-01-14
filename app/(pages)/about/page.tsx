@@ -31,8 +31,8 @@ export default function About() {
       </motion.div>
       <motion.div 
         className="w-full h-90 lg:w-xl rounded-sm flex items-center justify-center overflow-hidden shadow-2xl"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.6 }}
       >

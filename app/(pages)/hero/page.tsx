@@ -20,7 +20,7 @@ export default function Hero() {
     <main className="min-h-screen w-full flex flex-col items-center justify-center gap-15 lg:gap-10">
       <motion.div
         className="flex flex-col gap-3 items-center justify-center lg:gap-2 mt-10 lg:mt-0 md:mt-0"
-        initial={{ opacity: 0, y: 30 }}
+        initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
