@@ -162,5 +162,5 @@
 }
 
 .dark .App {
-  --grid-color: oklch(1 0 0 / 1%);
+  --grid-color: oklch(1 0 0 / 5%);
 }
