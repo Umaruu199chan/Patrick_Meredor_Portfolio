@@ -17,7 +17,9 @@ export default function Footer() {
               PATRICK MEREDOR
             </motion.h1>
             <div className="flex flex-row gap-3">
-                <motion.a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                <motion.a
+                    href='https://www.instagram.com/ui_ux_pat/'
+                    className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
                     hover:border-green-300 hover:bg-green-700 hover:text-white"
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -26,7 +28,9 @@ export default function Footer() {
                     >
                     <Instagram />
                 </motion.a>
-                <motion.a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                <motion.a
+                    href='https://www.facebook.com/ptrick.meredor'
+                    className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
                     hover:border-green-300 hover:bg-green-700 hover:text-white"
                     initial={{ opacity: 0, x:50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -35,7 +39,9 @@ export default function Footer() {
                 >
                     <Facebook />
                 </motion.a>
-                <motion.a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                <motion.a
+                    href='https://github.com/Umaruu199chan'
+                    className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
                     hover:border-green-300 hover:bg-green-700 hover:text-white"
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -44,7 +50,11 @@ export default function Footer() {
                 >
                     <Github />
                 </motion.a>
-                <motion.a className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
+                <motion.a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=meredor.patrick0@gmail.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border px-2 py-2 text-md rounded-md duration-300 transform-border ease-out
                     hover:border-green-300 hover:bg-green-700 hover:text-white"
                     initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -56,7 +66,7 @@ export default function Footer() {
             </div>
             </div>
             <div>
-                <p className='font-inter border-t border-green-500 pt-2 font-medium'>Official Portfolio Website</p>
+                <p className='font-inter border-t border-green-700 dark:border-green-500 pt-2 font-medium'>Official Portfolio Website</p>
             </div>
         </footer>
     )
