@@ -1,7 +1,26 @@
 "use client";
 import { motion } from "motion/react";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+  const [displayedText, setDisplayedText] = useState("");
+  const fullText = "I turn ideas into intuitive and visually consistent experiences.";
+  const typingSpeed = 50; // milliseconds per character
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const typingInterval = setInterval(() => {
+      if (currentIndex < fullText.length) {
+        setDisplayedText(fullText.slice(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, typingSpeed);
+
+    return () => clearInterval(typingInterval);
+  }, [fullText, typingSpeed]);
+
   const handleWorksClick = () => {
     const projectsSection = document.getElementById("projects");
     if (projectsSection) {
@@ -31,7 +50,26 @@ export default function Hero() {
         >
           PATRICK MEREDOR
         </h1>
-        <p className="font-inter text-md text-center lg:text-lg text-primary/80">I turn ideas into intuitive and visually consistent experiences.</p>
+        <motion.p 
+          className="font-inter text-md text-center lg:text-lg text-primary/80"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}
+        >
+          {displayedText}
+          {displayedText.length < fullText.length && (
+            <motion.span
+              animate={{ opacity: [1, 0] }}
+              transition={{
+                duration: 0.8,
+                repeat: Infinity,
+                repeatType: "reverse"
+              }}
+            >
+              |
+            </motion.span>
+          )}
+        </motion.p>
       </motion.div>
       <motion.div
         className="flex flex-col gap-5 lg:flex-row"
