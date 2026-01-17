@@ -14,10 +14,10 @@ export default function About() {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <h2 className="font-hero text-4xl md:text-5xl lg:text-6xl tracking-wide leading-tight">
-          Aspiring <span className="text-green-400 dark:text-green-500">UI & UX</span> Designer
+          Aspiring <span className="text-green-700 dark:text-green-500">UI & UX</span> Designer
         </h2>
         <div className="flex flex-row items-center gap-2 text-muted-foreground">
-          <MapPin className="w-5 h-5 text-green-400 dark:text-green-500" />
+          <MapPin className="w-5 h-5 text-green-700 dark:text-green-500" />
           <p className="font-inter text-base md:text-lg font-medium">
             Trece Martires City, Cavite
           </p>

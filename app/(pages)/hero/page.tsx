@@ -24,14 +24,14 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <p className="font-inter text-xl lg:text-xl text-green-500 font-semibold">UI & UX Designer</p>
+        <p className="font-inter text-xl lg:text-xl dark:text-green-500 text-green-700 font-semibold">UI & UX Designer</p>
         <h1
           className="font-hero text-6xl lg:text-9xl font-bold text-center tracking-wider lg:tracking-wide
           bg-linear-to-b from-foreground via-foreground to-gray-500 bg-clip-text text-transparent"
         >
           PATRICK MEREDOR
         </h1>
-        <p className="font-inter text-md text-center lg:text-lg text-gray-200/80">I turn ideas into intuitive and visually consistent experiences.</p>
+        <p className="font-inter text-md text-center lg:text-lg text-primary/80">I turn ideas into intuitive and visually consistent experiences.</p>
       </motion.div>
       <motion.div
         className="flex flex-col gap-5 lg:flex-row"
@@ -40,8 +40,8 @@ export default function Hero() {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <motion.button
-          className="font-inter font-medium border px-3 py-2 rounded-md bg-green-600
-          text-white hover:scale-95 hover:bg-green-700 hover:border-green-400 ease-in duration-300 transition-all border-green-300 cursor-pointer"
+          className="font-inter font-medium border px-3 py-2 rounded-md bg-green-700 dark:bg-green-500
+          text-white hover:scale-95 ease-in duration-300 transition-all cursor-pointer"
           whileHover="hover"
           initial="initial"
           onClick={handleWorksClick}
@@ -49,7 +49,7 @@ export default function Hero() {
           <span>View My Work</span>
         </motion.button>
         <motion.button
-          className="font-inter border px-3 py-2 rounded-md bg-background dark:bg-input/30 dark:border-input 
+          className="font-inter border px-3 py-2 rounded-md border-black/20 bg-background dark:bg-input/30 dark:border-input 
           hover:scale-95 ease-in duration-300 transition-all backdrop-blur-sm cursor-pointer"
           whileHover="hover"
           initial="initial"
