@@ -1,13 +1,21 @@
 "use client";
 import { ModeToggle } from "@/components/ui/shared/toggle";
 import Logo from "@/components/ui/logo";
+import { usePathname, useRouter } from "next/navigation";
+
 export default function Navbar() {
+  const router = useRouter();
+  const pathname = usePathname();
 
   const handleLogoClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    if (pathname === "/") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else {
+      router.push("/");
+    }
   };
 
   return (
