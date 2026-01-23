@@ -54,6 +54,35 @@ export const projects = [
                 title: "Provide a clear and predictable navigation experience",
                 desc: "Ensure users understand where to go next by using consistent labeling, hierarchy, and layout patterns."
             }
+        },
+        users: {
+                desc: "Before starting the redesign, I analyzed the existing PhilHealth homepage and reviewed common user needs based on publicly available information and informal observations. The goal was to understand how different Filipinos use the website and what challenges they face when accessing health insurance information.",
+                desc2: "Rather than focusing on visual preferences alone, I focused on identifying the primary tasks users visit the PhilHealth website to complete.",
+                desc3: "Based on these insights, I defined three core user archetypes and mapped them to their respective jobs-to-be-done.",
+            user1: {
+                title: "The Working Member",
+                desc: "Working professional who occasionally checks PhilHealth status but struggles with overwhelming navigation and dense homepage content.",
+                needs: "Quickly check my PhilHealth contributions and benefits to confirm eligibility without spending too much time navigating the site.",
+                img: "/user1.png"
+            },
+            user2: {
+                title: "The First-Time User",
+                desc: "New PhilHealth member unfamiliar with government sites, using mobile. Struggles to understand where to begin due to buried information.",
+                needs: "Clearly understand PhilHealth offerings and next steps from the homepage.",
+                img: "/user2.png"
+            },
+            user3: {
+                title: "The Senior User",
+                desc: "Senior citizen or family-assisted user needing clear, readable content. Overwhelmed by small text, low contrast, and complex navigation.",
+                needs: "When I access the website, I want information to be easy to read and simple to navigate so I don’t feel overwhelmed.",
+                img: "/user3.png"
+            },
+        },
+
+        process: {
+            title: "Content Prioritization & Structure",
+            desc:  "To support the defined UX goals, the homepage content was reorganized to prioritize essential services and reduce cognitive load. High-frequency user actions such as checking contributions, benefits, and membership information were placed prominently on the homepage, while secondary and informational content was grouped and moved lower in the layout.",
+            desc2: "Navigation and footer links were simplified to improve scanability and help users quickly understand where to go next. The structure was designed with a mobile-first approach to ensure key services remain accessible across different devices."
         }
     },
     // {
