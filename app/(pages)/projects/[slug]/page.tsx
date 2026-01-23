@@ -25,21 +25,21 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
             <Navbar />
             <main className="min-h-screen px-6 py-20 max-w-3xl mx-auto flex flex-col gap-10">
                 <section className="py-5">
-                    <h1 className="font-hero text-4xl md:text-5xl mb-4">
+                    <h1 className="font-hero text-3xl md:text-5xl mb-4">
                         {project.title}
                     </h1>
                 </section>
 
-                <section className="border-t border-b border-green-500 px-5 py-10 flex flex-col lg:flex-row  justify-evenly">
-                    <div className="items-center flex flex-col">
+                <section className="leading-relaxed border-t border-b border-green-500 px-5 py-10 flex flex-col gap-5 lg:flex-row lg:justify-evenly">
+                    <div className="lg:items-center flex flex-col">
                         <h3 className="text-muted-foreground">TIMELINE</h3>
                         <p>{project.date}</p>
                     </div>
-                    <div className="items-center flex flex-col">
+                    <div className="lg:items-center flex flex-col">
                         <h3 className="text-muted-foreground">PLATFORM</h3>
                         <p>{project.platform}</p>
                     </div>
-                    <div className="items-center flex flex-col">
+                    <div className="lg:items-center flex flex-col">
                         <h3 className="text-muted-foreground">MY ROLE</h3>
                         <p>{project.role}</p>
                     </div>
@@ -47,19 +47,19 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
                 <section className="space-y-3 font-inter leading-relaxed">
                     <h2 className="text-2xl font-bold">Introduction</h2>
-                    <p className="text-justify text-secondary-foreground/90">
+                    <p className="text-secondary-foreground/90 ">
                         {project.introduction}
                     </p>
                 </section>
 
                 <section className="space-y-3 font-inter leading-relaxed">
                     <h2 className="text-2xl font-bold">My Role</h2>
-                    <p className="text-justify text-secondary-foreground/90">I am the {project.role} of this redesign project.</p>
+                    <p className="text-secondary-foreground/90">I am the {project.role} of this redesign project.</p>
                 </section>
 
                 <section className="space-y-3 font-inter leading-relaxed mb-5">
                     <h2 className="text-2xl font-bold">Problem</h2>
-                    <p className="text-justify text-secondary-foreground/90">Here are the key problems on the homepage of Philhealth.</p>
+                    <p className="text-secondary-foreground/90">Here are the key problems on the homepage of Philhealth.</p>
                 </section>
 
                 {/* Problem #1 Section */}
@@ -259,7 +259,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     </div>
                 </section>
 
-                <section className="space-y-4 font-inter leading-relaxed">
+                <section className="space-y-4 font-inter leading-relaxed pb-10">
                     <h2 className="text-2xl font-bold">Process</h2>
                     <p className="space-y-2 text-secondary-foreground/90">The redesign followed a user-centered process focused on simplifying content and guiding users toward essential services.</p>
                     <div className="p-5 space-y-4">
@@ -284,6 +284,81 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                         </p>
 
                     </div>
+                </section>
+
+                <section className="space-y-4 font-inter leading-relaxed pb-10">
+                    <h2 className="text-2xl font-bold">Wireframe</h2>
+                        <p className="text-secondary-foreground/90">
+                        The homepage wireframe was designed to 
+                        improve clarity and accessibility by simplifying navigation, 
+                        prioritizing essential services, and maintaining consistent layout 
+                        patterns across all sections.</p>
+                        <div className="pt-6 pb-6 px-6">
+                            <Image src="/wireframe1.png"
+                                alt="Wireframe"
+                                width={800}
+                                height={600}
+                                className="w-full h-auto rounded-md"
+                                />
+                        </div>
+                </section>
+
+                <section className="space-y-4 font-inter leading-relaxed pb-10">
+                    <h2 className="text-2xl font-bold">High Fidelity Design</h2>
+                    <p className="text-secondary-foreground/90">The high-fidelity designs translate the validated wireframe 
+                        structure into a polished and accessible interface. Visual decisions 
+                        were guided by usability, readability, and accessibility, while maintaining 
+                        a clean and trustworthy look appropriate for a government healthcare platform.</p>
+                        <div className="pt-6 pb-6 px-6">
+                            <Image src="/high-fidelity.png"
+                                alt="Wireframe"
+                                width={800}
+                                height={600}
+                                className="w-full h-auto rounded-md"
+                                />
+                        </div>
+                    <div className="space-y-10 px-6">
+                        <div className="flex flex-col gap-3">
+                            <h2 className="text-xl font-medium">
+                                {project.uiDecision.decision1.title}
+                            </h2>
+                            <p className="space-y-2 text-secondary-foreground/90">{project.uiDecision.decision1.desc}</p>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                            <h2 className="text-xl font-medium">
+                                {project.uiDecision.decision2.title}
+                            </h2>
+                            <p className="space-y-2 text-secondary-foreground/90">{project.uiDecision.decision2.desc}</p>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                            <h2 className="text-xl font-medium">
+                                {project.uiDecision.decision3.title}
+                            </h2>
+                            <p className="space-y-2 text-secondary-foreground/90">{project.uiDecision.decision3.desc}</p>
+                        </div>
+                        <div className="flex flex-col gap-3">
+                            <h2 className="text-xl font-medium">
+                                {project.uiDecision.decision4.title}
+                            </h2>
+                            <p className="space-y-2 text-secondary-foreground/90">{project.uiDecision.decision4.desc}</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section className="space-y-4 font-inter leading-relaxed pb-10">
+                    <h2 className="text-2xl font-bold">What i learned</h2>
+                        <p className="space-y-2 text-secondary-foreground/90"> {project.learning.learning1}</p>
+                        <p className="space-y-2 text-secondary-foreground/90"> {project.learning.learning2}</p>
+                </section>
+                <section className="space-y-4 font-inter leading-relaxed pb-10">
+                    <h2 className="text-2xl font-bold">Challenges</h2>
+                    <p className="space-y-2 text-secondary-foreground/90"> {project.challenges.challenge1}</p>
+                    <p className="space-y-2 text-secondary-foreground/90"> {project.challenges.challenge2}</p>
+                </section>
+                <section className="space-y-4 font-inter leading-relaxed pb-10">
+                    <h2 className="text-2xl font-bold">Future</h2>
+                    <p className="space-y-2 text-secondary-foreground/90"> {project.future.future1}</p>
+                    <p className="space-y-2 text-secondary-foreground/90"> {project.future.future2}</p>
                 </section>
             </main>
         </>
